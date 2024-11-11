@@ -7,11 +7,10 @@ const Navbar: React.FC = () => {
 	<nav className="navbar">
         <div className="navbar-brand">
           <span className="navbar-chip"></span>
-          <p>Chihab BERKANE</p>
-          <p>Software developer</p>
+          <p>Chihab BERKANE <small>Software developer</small></p>
         </div>
-        
-        <ul>
+
+        <ul className="navbar-items">
           <li>Resume</li>
           <li>Skills</li>
           <li>Contact</li>

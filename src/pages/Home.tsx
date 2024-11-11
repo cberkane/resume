@@ -1,4 +1,4 @@
-import React from "react"; // TODO: use double quotes
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import model from "./../assets/model.webp"; // TODO: add src relative path"

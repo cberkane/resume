@@ -12,16 +12,16 @@ const Footer: React.FC = () => {
 				</div>
 				<div className="footer-item">
 					<p className="label">Email</p>
-					<a className="info" href="tel:0652000000">0652000000</a>
+					<a className="info" href="mailto:c.berkane@hotmail.fr">c.berkane@hotmail.fr</a>
 				</div>
 				<div className="footer-item">
 					<p className="label">Follow me</p>
 					<a className="info" href="tel:0652000000">0652000000</a>
 				</div>
 				<div className="footer-item">
-					<small>
-						This was inspired by this <a href="">Wix template</a> and done with React framework
-					</small>
+					<p className="foo">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aperiam animi natus!
+					</p>
 				</div>
 			</div>
 		</footer>

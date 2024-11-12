@@ -1,6 +1,5 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
   font-weight: 400;
 }
 
@@ -19,6 +18,9 @@ body {
   min-height: 100vh;
 }
 
+#main-app-container {
+  min-height: calc(100vh - 240px); /* todo: use scss variables */
+}
 
 /* RESET ELEMENTS */
 ul {

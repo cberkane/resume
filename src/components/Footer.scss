@@ -3,16 +3,25 @@
 	padding-inline: 32px;
 	
 	.app-footer-container {
+		height: 160px;
 		display: flex;
 		padding-block: 32px;
 		border-top: 1px solid #c7c7c7;
 		
 		.footer-item {
-			flex: 1;
-			padding: 0 18px;
-			p {
+			flex: 1 0 0px;
+			.label {
 				font-size: 18px;
 				font-weight: 600;
+				margin-bottom: 4px;
+			}
+			.info {
+				font-weight: 300;
+				cursor: pointer;
+			}
+			.foo {
+				width: 280px;
+				font-weight: 300;
 			}
 		}
 	}

@@ -1,0 +1,53 @@
+.resume-item {
+	display: flex;
+	
+	.resume-item-aside {
+		width: 200px;
+		padding-inline: 18px;
+		text-align: right;
+	}
+	
+	.resume-item-header {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		margin-bottom: 12px;
+		
+		h3 {
+			font-size: 16px;
+		}
+		
+		a {
+			border: 1px solid;
+			width: 36px;
+			height: 36px;
+			border: 1px solid #dadce0;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			img {
+				display: block;
+				width: 22px;
+				height: 22px;
+			}
+		}
+	}
+	
+	.resume-item-body {
+		.description {
+			width: 380px;
+			line-height: 1.5;
+			font-weight: 300;
+			margin-bottom: 6px;
+		}
+		.task {
+			&::before {
+				content: "-";
+				margin-right: 4px;
+			}
+		}
+		
+	}
+}

@@ -10,7 +10,9 @@ function App() {
   return (
     <>
       <Navbar />
-      {content}
+      <div id="main-app-container">
+        {content}
+      </div>
       <Footer />
     </>
   )

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import model from "./../assets/model.webp"; // TODO: add src relative path"
+import model from "src/assets/model.webp";
 import "./Home.scss";
 
 const Home: React.FC = () => {
@@ -18,7 +18,7 @@ const Home: React.FC = () => {
 						<p>I"m a paragraph. Click here to add your own text and edit me. I"m a great place for you to tell a story and let your users know a little more about you.</p>
 					</div>
 					<div className="page-home-landing-action">
-						<button className="round-btn orange" onClick={() => navigate("/home")}>Resume</button>
+						<button className="round-btn orange" onClick={() => navigate("/resume")}>Resume</button>
 						<button className="round-btn red" onClick={() => navigate("/skills")}>Skills</button>
 						<button className="round-btn azure" onClick={() => navigate("/contact")}>Contacts</button>
 					</div>

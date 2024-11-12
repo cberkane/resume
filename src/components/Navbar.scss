@@ -9,6 +9,7 @@
 		display: flex;
 		align-items: center;
 		gap: 8px;
+		cursor: pointer;
 
 		.navbar-chip {
 			width: 24px;
@@ -31,7 +32,7 @@
 
 	.navbar-items {
 		display: flex;
-		flex-basis: 400px;
+		flex-basis: 300px;
 
 		li {
 			flex-grow: 1;

@@ -1,53 +1,70 @@
 .resume-item {
 	display: flex;
-	
+	gap: 4px;
+
 	.resume-item-aside {
 		width: 200px;
 		padding-inline: 18px;
+		padding-block: 2px;
 		text-align: right;
+
+		span {
+			font-weight: 300;
+		}
 	}
-	
+
 	.resume-item-header {
 		display: flex;
 		align-items: center;
-		gap: 12px;
-		margin-bottom: 12px;
-		
+		gap: 6px;
+		margin-bottom: 4px;
+
 		h3 {
-			font-size: 16px;
+			text-transform: capitalize;
 		}
-		
+
+		p {
+			color: #707070;
+		}
+
 		a {
 			border: 1px solid;
-			width: 36px;
-			height: 36px;
+			width: 32px;
+			height: 32px;
 			border: 1px solid #dadce0;
 			border-radius: 50%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			cursor: pointer;
+
 			img {
 				display: block;
-				width: 22px;
-				height: 22px;
+				width: 18px;
+				height: 18px;
 			}
 		}
 	}
-	
+
 	.resume-item-body {
+		max-width: 460px;
+		font-size: 16px;
+		margin-bottom: 4px;
+		
 		.description {
-			width: 380px;
 			line-height: 1.5;
 			font-weight: 300;
 			margin-bottom: 6px;
 		}
+
 		.task {
+			font-weight: 300;
+
 			&::before {
 				content: "-";
 				margin-right: 4px;
 			}
 		}
-		
+
 	}
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import model from "src/assets/model.webp";
+import model from "./../assets/model.webp";
 import "./Home.scss";
 
 const Home: React.FC = () => {

@@ -1,0 +1,21 @@
+.page-resume-section {
+	margin-block: 80px;
+
+	h1 {
+		font-size: 44px;
+		margin-bottom: 44px;
+	}
+
+	.resume-container {
+		display: flex;
+
+		.aside {
+			flex: 1;
+		}
+
+		.body {
+			flex: 2;
+			padding-block: 6px;
+		}
+	}
+}

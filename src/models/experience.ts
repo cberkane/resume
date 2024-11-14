@@ -10,4 +10,5 @@ export interface Experience {
 	description: string;
 	tasks: string[];
 	technologies?: string[]; 
+	environment?: string[];
 }

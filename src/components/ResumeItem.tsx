@@ -5,28 +5,32 @@ import "./ResumeItem.scss";
 const ResumeItem: React.FC<{ experience: Experience, className?: string }> = ({ experience, className }) => {
 
 	return (
-		<div className={`resume-item ${className}`} style={{ marginBottom: "16px" }}>
+		<div className={`resume-item ${className}`}>
 			<div className="resume-item-aside">
 				<span>{experience.startDate}</span> - <span>{experience.endDate ?? 'today'}</span>
 			</div>
+			<a className="resume-item-link" href={experience.companyHref} target="_blank">
+				<img src={experience.companyImg} />
+			</a>
 			<div>
 				<div className="resume-item-header">
-					<a href={experience.companyHref} target="_blank">
-						<img src={experience.companyImg} />
-					</a>
 					<div>
 						<h3>{experience.jobTitle}</h3>
-						<p>At {experience.companyName}</p>
+						<p>Chez {experience.companyName}</p>
 					</div>
 				</div>
 				<div className="resume-item-body">
 					<p className="description">{experience.description}</p>
+					<p className="label">Taches :</p>
 					{experience.tasks?.map(task => <p className="task">{task}</p>)}
 				</div>
 				<div className="resume-item-footer">
-					<span>Used techs</span>
+					<p className="label">Technos :</p>
 					<div>
-						{experience.technologies?.map(tech => <img width={'24px'} height={'24px'} src={tech}/>)}
+						{experience.technologies?.map(tech => <img width={'24px'} height={'24px'} src={tech} />)}
+					</div>
+					<div>
+						{experience.environment?.map(env => <img width={'24px'} height={'24px'} src={env} />)}
 					</div>
 				</div>
 			</div>

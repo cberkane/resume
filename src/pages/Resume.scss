@@ -16,6 +16,10 @@
 		.body {
 			flex: 2;
 			padding-block: 6px;
+			
+			.item {
+				margin-bottom: 24px;
+			}
 		}
 	}
 }

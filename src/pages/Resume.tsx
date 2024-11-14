@@ -6,13 +6,13 @@ import "./Resume.scss";
 const Resume: React.FC = () => {
 	return (
 		<section className="page-resume-section">
-			<h1>Resume</h1>
+			<h1>Mon CV</h1>
 			<div className="resume-container">
 				<div className="aside">
-					<h2>Work experience</h2>
+					<h2>Expérience pro</h2>
 				</div>
 				<div className="body">
-					{experiences.map(exp => <ResumeItem experience={exp} />)}
+					{experiences.map(exp => <ResumeItem className="item" experience={exp} />)}
 				</div>
 			</div>
 		</section>

@@ -1,34 +1,9 @@
 import { Experience } from "../models/experience";
+import { IconName } from '../models/icon';
 
-/* Images */
 import powens from "../assets/images/Powens.png";
 import aboutbio from "../assets/images/Aboutbio.png";
 import cgi from "../assets/images/CGI.png";
-
-
-/* Icons */
-import  angular  from "../assets/icons/angular.svg";
-import  cypress  from "../assets/icons/cypress.svg";
-import  debian  from "../assets/icons/debian.svg";
-import  django  from "../assets/icons/django.svg";
-import  docker  from "../assets/icons/docker.svg";
-import  eclipse  from "../assets/icons/eclipse.svg";
-import  express  from "../assets/icons/express.svg";
-import  figma  from "../assets/icons/figma.svg";
-import  github  from "../assets/icons/github.svg";
-import  gitlab  from "../assets/icons/gitlab.svg";
-import  intellij  from "../assets/icons/intellij.svg";
-import  java  from "../assets/icons/java.svg";
-import  jira from "../assets/icons/jira.svg";
-import  material  from "../assets/icons/material.svg";
-import  node from "../assets/icons/node.svg";
-import  postgresql from "../assets/icons/postgresql.svg";
-import  react from "../assets/icons/react.svg";
-import  spring from "../assets/icons/spring-boot.svg";
-import  sqlserver from "../assets/icons/sql-server.svg";
-import  ubuntu from "../assets/icons/ubuntu.svg";
-import  vscode from "../assets/icons/vscode.svg";
-
 
 export const experiences: Experience[] = [
 	{
@@ -47,18 +22,18 @@ export const experiences: Experience[] = [
 			"Veille technique et contribution aux choix techniques",
 		],
 		technologies: [
-			angular,
-			cypress,
-			node,
-			react,
-			django,
+			IconName.Angular,
+			IconName.Cypress,
+			IconName.Node,
+			IconName.React,
+			IconName.Django,
 		],
 		environment: [
-			debian,
-			vscode,
-			gitlab,
-			jira,
-			figma,
+			IconName.Debian,
+			IconName.Vscode,
+			IconName.Gitlab,
+			IconName.Jira,
+			IconName.Figma,
 		]
 	},
 	{
@@ -76,16 +51,16 @@ export const experiences: Experience[] = [
 			"Assistance technique et téléphonique aux usagers et patients.",
 		],
 		technologies: [
-			angular,
-			express,
-			node,
-			postgresql,
+			IconName.Angular,
+			IconName.Express,
+			IconName.Node,
+			IconName.Postgresql,
 		],
 		environment: [
-			ubuntu,
-			intellij,
-			github,
-			docker,
+			IconName.Ubuntu,
+			IconName.Intellij,
+			IconName.Github,
+			IconName.Docker,
 		]
 	},
 	{
@@ -102,18 +77,18 @@ export const experiences: Experience[] = [
 			"Intervention sur projet Wordpress.",
 		],
 		technologies: [
-			angular,
-			material,
-			java,
-			spring,
-			sqlserver,
+			IconName.Angular,
+			IconName.Material,
+			IconName.Java,
+			IconName.Spring,
+			IconName.Sqlserver,
 		],
 		environment: [
-			ubuntu,
-			vscode,
-			eclipse,
-			github,
-			jira,
+			IconName.Ubuntu,
+			IconName.Vscode,
+			IconName.Eclipse,
+			IconName.Github,
+			IconName.Jira,
 		]
 	},
-]
+];

@@ -1,0 +1,43 @@
+.page-skills-section {
+	margin-block: 80px;
+
+	h1 {
+		font-size: 44px;
+		margin-bottom: 44px;
+	}
+
+	.skill-container {
+		display: flex;
+		margin-bottom: 24px;
+
+		.aside {
+			flex: 1;
+		}
+
+		.body {
+			flex: 2;
+			display: flex;
+			flex-direction: column;
+			gap: 18px;
+			padding-block: 3px;
+
+			.title {
+				font-size: 18px;
+				font-weight: 600;
+			}
+
+			.skill-item {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				padding-left: 200px;
+			}
+		}
+	}
+	
+	hr {
+		border: none;
+		border-top: 1px solid #c7c7c7;
+		margin-bottom: 24px;
+	}
+}

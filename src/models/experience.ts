@@ -1,3 +1,5 @@
+import { IconName } from "./icon";
+
 export interface Experience {
 	jobTitle: string;
 	startDate: string;
@@ -9,6 +11,6 @@ export interface Experience {
 
 	description: string;
 	tasks: string[];
-	technologies?: string[]; 
-	environment?: string[];
+	technologies?: IconName[]; 
+	environment?: IconName[];
 }

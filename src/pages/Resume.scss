@@ -16,10 +16,18 @@
 		.body {
 			flex: 2;
 			padding-block: 6px;
-			
+
 			.item {
 				margin-bottom: 24px;
 			}
+
+
 		}
+	}
+
+	hr {
+		border: none;
+		border-top: 1px solid #c7c7c7;
+		margin-bottom: 24px;
 	}
 }

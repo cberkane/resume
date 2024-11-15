@@ -82,6 +82,31 @@
 			img {
 				cursor: pointer;
 			}
+
+			.tooltip {
+				position: relative;
+
+				&::before {
+					--scale: 0;
+
+					content: attr(data-tooltip);
+					position: absolute;
+					top: -8px;
+					left: 50%;
+					border-radius: 6px;
+					padding: 4px 8px;
+					background-color: rgba($color: #272424, $alpha: .9);
+					color: #fff;
+					font-size: 16px;
+					text-transform: capitalize;
+					transform: translateX(-50%) translateY(-100%) scale(var(--scale));
+					transition: transform 150ms;
+				}
+
+				&:hover::before {
+					--scale: 1;
+				}
+			}
 		}
 	}
 }

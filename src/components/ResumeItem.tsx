@@ -12,9 +12,13 @@ const ResumeItem: React.FC<{ experience?: Experience, education?: Education, cla
 			<div className="resume-item-aside">
 				<span>{experience?.startDate || education?.startDate}</span> - <span>{(experience?.endDate || experience?.endDate) ?? 'today'}</span>
 			</div>
-			<a className="resume-item-link" href={experience?.companyHref} target="_blank">
-				<img src={experience?.companyImg || education?.img} />
-			</a>
+			<a className="resume-item-link"
+				href={experience?.companyHref}
+				target="_blank"
+				style={{
+					backgroundImage: `url("${experience?.companyImg ?? education?.img}")`
+				}}
+			/>
 			{experience &&
 				<div>
 					<div className="resume-item-header">

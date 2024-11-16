@@ -2,9 +2,10 @@ import { IconName } from "../models/icon";
 
 export interface Skill {
 	title: string;
-	proficiency: Proficiency;
 	icon: IconName;
 	category: string;
+	proficiency?: Proficiency;
+	remark?: string;
 }
 
 export enum Proficiency {

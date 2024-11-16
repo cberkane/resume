@@ -7,8 +7,7 @@ import "./Skills.scss";
 
 const Skills: React.FC = () => {
 
-	const translateProficiency = (arg: Proficiency) => {
-		console.log('proficiency');
+	const translateProficiency = (arg?: Proficiency) => {
 		switch (arg) {
 			case Proficiency.Beginner: return "débutant";
 			case Proficiency.Intermediate: return "intermédiaire";
@@ -31,7 +30,7 @@ const Skills: React.FC = () => {
 								<Icon iconName={skill.icon} size={36} />
 								<div>
 									<p className="title">{skill.title}</p>
-									<p>Niveau de maîtrise <span style={{ fontWeight: 600 }}>{translateProficiency(skill.proficiency)}</span></p>
+									<p>Niveau <span style={{ fontWeight: 600 }}>{translateProficiency(skill.proficiency)}</span></p>
 								</div>
 							</div>
 						))
@@ -39,6 +38,45 @@ const Skills: React.FC = () => {
 				</div>
 			</div>
 			<hr />
+			<div className="skill-container">
+				<div className="aside">
+					<h2>Technos</h2>
+				</div>
+				<div className="body">
+					{skills
+						.filter(skill => skill.category === SkillCategory.Framework)
+						.map(skill => (
+							<div className="skill-item">
+								<Icon iconName={skill.icon} size={36} />
+								<div>
+									<p className="title">{skill.title}</p>
+									<p>Niveau <span style={{ fontWeight: 600 }}>{translateProficiency(skill.proficiency)}</span></p>
+								</div>
+							</div>
+						))
+					}
+				</div>
+			</div>
+			<hr />
+			<div className="skill-container">
+				<div className="aside">
+					<h2>Outils</h2>
+				</div>
+				<div className="body">
+					{skills
+						.filter(skill => skill.category === SkillCategory.Tool)
+						.map(skill => (
+							<div className="skill-item">
+								<Icon iconName={skill.icon} size={36} />
+								<div>
+									<p className="title">{skill.title}</p>
+									<p>{skill.remark}</p>
+								</div>
+							</div>
+						))
+					}
+				</div>
+			</div>
 		</section>
 	);
 }

@@ -1,11 +1,12 @@
-export interface User {
-	fullName: string;
-	email: string;
-	phoneNumber: string;
-}
+import { User } from "src/models/user";
 
 export const me: User = {
+	firstName: "chihab",
+	lastName: "berkane",
 	fullName: "Chihab BERKANE",
 	email: "c.berkane@hotmail.fr",
-	phoneNumber: ""
+	phoneNumber: "0652906321",
+	socials : {
+		github: "https://github.com/cberkane/",
+	}
 }

@@ -11,6 +11,7 @@ import express from "../assets/icons/express.svg";
 import figma from "../assets/icons/figma.svg";
 import github from "../assets/icons/github.svg";
 import gitlab from "../assets/icons/gitlab.svg";
+import info from "../assets/icons/info.svg";
 import intellij from "../assets/icons/intellij.svg";
 import java from "../assets/icons/java.svg";
 import javascript from "../assets/icons/javascript.svg";
@@ -18,10 +19,14 @@ import jira from "../assets/icons/jira.svg";
 import material from "../assets/icons/material.svg";
 import node from "../assets/icons/node.svg";
 import postgresql from "../assets/icons/postgresql.svg";
+import python from "../assets/icons/python.svg";
 import react from "../assets/icons/react.svg";
+import rxjs from "../assets/icons/rxjs.svg";
 import scss from "../assets/icons/scss.svg";
 import spring from "../assets/icons/spring-boot.svg";
+import sql from "../assets/icons/sql.svg";
 import sqlserver from "../assets/icons/sql-server.svg";
+import success from "../assets/icons/success.svg";
 import typescript from "../assets/icons/typescript.svg";
 import ubuntu from "../assets/icons/ubuntu.svg";
 import vscode from "../assets/icons/vscode.svg";
@@ -37,6 +42,7 @@ export const icons = {
 	"figma": figma,
 	"github": github,
 	"gitlab": gitlab,
+	"info": info,
 	"intellij": intellij,
 	"java": java,
 	"javascript": javascript,
@@ -44,10 +50,14 @@ export const icons = {
 	"material": material,
 	"node": node,
 	"postgresql": postgresql,
+	"python": python,
 	"react": react,
+	"rxjs": rxjs,
 	"scss": scss,
 	"spring": spring,
+	"sql": sql,
 	"sqlserver": sqlserver,
+	"success": success,
 	"typescript": typescript,
 	"ubuntu": ubuntu,
 	"vscode": vscode,

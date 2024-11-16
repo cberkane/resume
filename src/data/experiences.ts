@@ -1,7 +1,7 @@
 import { Experience } from "../models/experience";
 import { IconName } from '../models/icon';
 
-import powens from "../assets/images/Powens.png";
+import powens from "../assets/images/Powens.jpeg";
 import aboutbio from "../assets/images/Aboutbio.png";
 import cgi from "../assets/images/CGI.png";
 

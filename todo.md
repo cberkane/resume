@@ -9,3 +9,10 @@
 [] - Implémenter le design responsive
 [] - Tester sur écrans larges
 [] - Checker les todos
+[] - Faire les titres des onglets
+[] - Rédiger le hello (me)
+[] - Prendre la photo
+[] - Finir la page Contact
+[] - créer un path alias pour "src"
+[] - mettre les dates sur les educations
+[] - ajouter les animations

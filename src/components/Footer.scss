@@ -16,12 +16,20 @@
 				margin-bottom: 4px;
 			}
 			.info {
+				display: flex;
+				align-items: center;
+				gap: 4px;
 				font-weight: 300;
 				cursor: pointer;
 			}
-			.foo {
+			.text-info {
 				width: 280px;
 				font-weight: 300;
+				
+				a {
+					cursor: pointer;
+					text-decoration: underline;
+				}
 			}
 		}
 	}

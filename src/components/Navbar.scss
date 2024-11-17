@@ -40,7 +40,7 @@
 			transition: color 600ms;
 			cursor: pointer;
 
-			&:hover {
+			&:hover, &.active {
 				color: #926402;
 			}
 

@@ -10,7 +10,7 @@ const ResumeItem: React.FC<{ experience?: Experience, education?: Education, cla
 	return (
 		<div className={`resume-item ${className}`}>
 			<div className="resume-item-aside">
-				<span>{experience?.startDate || education?.startDate}</span> - <span>{(experience?.endDate || experience?.endDate) ?? 'today'}</span>
+				<span>{experience?.startDate || education?.startDate}</span> - <span>{(experience?.endDate || experience?.endDate) ?? "aujourd'hui"}</span>
 			</div>
 			<a className="resume-item-link"
 				href={experience?.companyHref}

@@ -5,14 +5,23 @@
 [x] - Gérer l'envoi échoué des mailings
 [x] - Tester les Vercel envs
 [x] - Implémenter l'envoi de mails
-[] - Créer la user info
+[x] - Créer la user info
+[x] - Faire les titres des onglets
+[x] - Finir la page Contact
+[x] - Ajout d'un padding pour le corps des pages
+[x] - Rédiger le hello (me)
+[x] - Changer de nom de domaine
 [] - Implémenter le design responsive
+[] - Prendre la photo
+[] - mettre les dates sur les educations
 [] - Tester sur écrans larges
 [] - Checker les todos
-[] - Faire les titres des onglets
-[] - Rédiger le hello (me)
-[] - Prendre la photo
-[] - Finir la page Contact
-[] - créer un path alias pour "src"
-[] - mettre les dates sur les educations
+[] - arrondir les skills
+[] - refactorer les couleurs
+[] - ajouter le ripple effect
 [] - ajouter les animations
+[] - Faire le svg components
+[] - créer un path alias pour "src"
+[] - Refactor le css des page sections
+[] - Checker les commentaires todo
+[] - Controller l'envoi du formulaire

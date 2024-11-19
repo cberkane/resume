@@ -29,6 +29,7 @@
 				p:first-of-type {
 					font-size: 22px;
 					font-weight: 600;
+					margin-bottom: 8px;
 				}
 				p:last-of-type {
 					font-size: 16px;
@@ -49,7 +50,7 @@
 					border: 1px solid;
 					border-radius: 1000px;
 					transition: background-color 600ms;
-					font-size: 22px;
+					font-size: 20px;
 					font-weight: 600;
 					&.orange {
 						background-color: #eea302;

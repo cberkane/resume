@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Icon from "../components/Icon";
 import { skills } from "../data/skills";
 import { Proficiency, SkillCategory } from "../models/skill";
+import { me } from "../data/me";
 
 import "./Skills.scss";
 
 const Skills: React.FC = () => {
+	
+	useEffect(() => {
+		document.title = `${me.firstName} - Compétences`;
+	});
 
 	const translateProficiency = (arg?: Proficiency) => {
 		switch (arg) {

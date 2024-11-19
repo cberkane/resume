@@ -7,7 +7,7 @@ import "./Navbar.scss";
 const Navbar: React.FC = () => {
     const navigate = useNavigate();
     const { pathname } = useLocation();
-
+    
     return <>
         <nav className="navbar">
             <div className="navbar-brand" onClick={() => navigate("/home")}>
@@ -16,8 +16,8 @@ const Navbar: React.FC = () => {
             </div>
 
             <ul className="navbar-items">
-                <li onClick={() => navigate("/resume")} className={pathname === "/resume" ? "active" : undefined}>Resume</li>
-                <li onClick={() => navigate("/skills")} className={pathname === "/skills" ? "active" : undefined}>Skills</li>
+                <li onClick={() => navigate("/resume")} className={pathname === "/resume" ? "active" : undefined}>Mon CV</li>
+                <li onClick={() => navigate("/skills")} className={pathname === "/skills" ? "active" : undefined}>Compétences</li>
                 <li onClick={() => navigate("/contact")} className={pathname === "/contact" ? "active" : undefined}>Contact</li>
             </ul>
         </nav>

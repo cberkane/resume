@@ -5,6 +5,7 @@ export interface User {
 	email: string;
 	phoneNumber: string;
 	occupation: string;
+	location: string;
 	socials: {
 		github: string;
 	}

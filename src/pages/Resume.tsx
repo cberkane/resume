@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ResumeItem from "../components/ResumeItem";
 import { experiences } from "./../data/experiences"; // TODO: add alias to 
-import { education } from "./../data/education"; // TODO: add alias to 
+import { education } from "./../data/education";
+import { me } from "./../data/me";
+
 import "./Resume.scss";
 
 const Resume: React.FC = () => {
+
+	useEffect(() => {
+		document.title = `${me.firstName} - Mon CV`;
+	});
+
 	return (
 		<section className="page-resume-section">
 			<h1>Mon CV</h1>

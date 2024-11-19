@@ -1,7 +1,8 @@
-import React, { ChangeEvent, SyntheticEvent, useState } from "react";
+import React, { ChangeEvent, SyntheticEvent, useEffect, useState } from "react";
 import emailjs from '@emailjs/browser';
 import { IconName } from "../models/icon";
 import { Validator } from "../utils/validators";
+import { me } from "../data/me";
 import Icon from "../components/Icon";
 
 import "./Contact.scss";
@@ -15,6 +16,11 @@ interface ContactFormValues {
 }
 
 const Contact: React.FC = () => {
+
+	useEffect(() => {
+		document.title = `${me.firstName} - Contact`;
+	});
+
 	const [formValues, setFormValues] = useState<ContactFormValues>({
 		firstName: '',
 		lastName: '',
@@ -86,9 +92,23 @@ const Contact: React.FC = () => {
 
 	return <>
 		<section className="page-contact-section">
+			<h1>Contact</h1>
 			<div className="contact-container">
 				<div className="aside">
-					<h2>Contact</h2>
+					<h2>Mes coordonnées</h2>
+					<p className="info">Au plaisir de vous lire prochainement.</p>
+					<div className="aside-item">
+						<p className="title">Téléphone</p>
+						<p className="info">{me.phoneNumber}</p>
+					</div>
+					<div className="aside-item">
+						<p className="title">Email</p>
+						<p className="info">{me.email}</p>
+					</div>
+					<div className="aside-item">
+						<p className="title">Adresse</p>
+						<p className="info">{me.location}</p>
+					</div>
 				</div>
 				<div className="body">
 					<form onSubmit={handleSubmit} className="form-grid">

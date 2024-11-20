@@ -2,6 +2,7 @@ import React, { ForwardedRef } from "react";
 import { IconName } from "../models/icon";
 
 import angular from "../assets/icons/angular.svg";
+import burger from "../assets/icons/burger.svg";
 import cypress from "../assets/icons/cypress.svg";
 import debian from "../assets/icons/debian.svg";
 import django from "../assets/icons/django.svg";
@@ -33,6 +34,7 @@ import vscode from "../assets/icons/vscode.svg";
 
 export const icons = {
 	"angular": angular,
+	"burger": burger,
 	"cypress": cypress,
 	"debian": debian,
 	"django": django,

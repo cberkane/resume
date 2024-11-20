@@ -1,27 +1,44 @@
+@import "./../styles/theme.scss";
+
 .page-resume-section {
 	margin-block: 80px;
 
 	h1 {
 		font-size: 44px;
 		margin-bottom: 44px;
+
+		@include small-screen {
+			font-size: 34px;
+			text-align: center;
+		}
 	}
 
 	.resume-container {
 		display: flex;
+		flex-wrap: wrap;
+		gap: 18px;
+
+		@include small-screen {
+			h2 {
+				margin-left: calc(36px + 6px)
+			}
+		}
 
 		.aside {
-			flex: 1;
+			flex: 1 0 0px;
+
+			@include small-screen {
+				flex: 1 0 360px;
+			}
 		}
 
 		.body {
-			flex: 2;
+			flex: 2 0 0px;
 			padding-block: 6px;
 
 			.item {
 				margin-bottom: 24px;
 			}
-
-
 		}
 	}
 

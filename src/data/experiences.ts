@@ -42,8 +42,8 @@ export const experiences: Experience[] = [
 		companyName: "Atoutbio",
 		companyImg: aboutbio,
 		companyHref: "https://www.atoutbio.eu/",
-		startDate: "Mars 2022",
-		endDate: "Juillet 2021",
+		startDate: "Sept. 2021",
+		endDate: "Avril 2022",
 		tasks: [
 			"Conception et intégration de pages web.",
 			"Création d’API pour exposer des données de santé.",
@@ -69,8 +69,8 @@ export const experiences: Experience[] = [
 		companyName: "CGI",
 		companyImg: cgi,
 		companyHref: "https://www.cgi.com",
-		startDate: "Juin 2021",
-		endDate: "Sept. 2020",
+		startDate: "Juin 2020",
+		endDate: "Juin 2021",
 		tasks: [
 			"Développement de web services du catalogue.",
 			"Création de pages web en Angular et Material.",

@@ -10,15 +10,15 @@ const Footer: React.FC = () => {
 		<footer className="app-footer">
 			<div className="app-footer-container">
 				<div className="footer-item">
-					<p className="label">Phone number</p>
+					<p className="label">Téléphone</p>
 					<a className="info" href={`tel:${me.phoneNumber}`}>{me.phoneNumber}</a>
 				</div>
 				<div className="footer-item">
-					<p className="label">Email</p>
+					<p className="label">Adresse mail</p>
 					<a className="info" href="mailto:c.berkane@hotmail.fr">{me.email}</a>
 				</div>
 				<div className="footer-item">
-					<p className="label">Follow me</p>
+					<p className="label">Réseaux</p>
 					<a className="info" href={me.socials.github} target="_blank"><Icon iconName={IconName.Github} size={16}/> Github</a>
 				</div>
 				<div className="footer-item">
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
 				</div>
 			</div>
 		</footer>
-	)
+	);
 }
 
 export default Footer;

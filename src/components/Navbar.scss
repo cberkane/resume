@@ -1,3 +1,5 @@
+@import "./../styles/theme.scss";
+
 .navbar {
 	display: flex;
 	justify-content: space-between;
@@ -14,7 +16,7 @@
 		.navbar-chip {
 			width: 24px;
 			height: 24px;
-			border-radius: 1000px;
+			border-radius: 50%;
 			background-color: #eea302;
 		}
 
@@ -26,6 +28,10 @@
 			small {
 				font-weight: 300;
 				margin-left: 4px;
+			}
+
+			@include small-screen {
+				font-size: 18px;
 			}
 		}
 	}
@@ -40,13 +46,41 @@
 			transition: color 600ms;
 			cursor: pointer;
 
-			&:hover, &.active {
+			&:hover,
+			&.active {
 				color: #926402;
 			}
 
 			&:not(:last-child) {
 				border-right: 1px solid #000;
 			}
+		}
+
+		@include small-screen {
+			display: none;
+		}
+	}
+
+	.navbar-burger {
+		display: none;
+
+		@include small-screen {
+			display: block;
+		}
+	}
+}
+
+.drawer-items {
+	font-size: 22px;
+	font-weight: 300;
+
+	li {
+		height: 56px;
+		cursor: pointer;
+
+		&:hover,
+		&.active {
+			color: #926402;
 		}
 	}
 }

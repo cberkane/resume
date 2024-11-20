@@ -1,11 +1,13 @@
+@import "./../styles/theme.scss";
+
 .resume-item {
 	display: flex;
-	gap: 4px;
+	flex-wrap: wrap;
+	gap: 8px;
 
-	.resume-item-aside {
-		width: 200px;
-		padding-inline: 18px;
-		padding-block: 2px;
+	.item-aside {
+		min-width: 200px;
+		padding: 3px 0;
 		text-align: right;
 
 		span {
@@ -14,91 +16,115 @@
 		}
 	}
 
-	.resume-item-link {
-		border: 1px solid;
-		width: 32px;
-		height: 32px;
-		border: 1px solid #dadce0;
-		border-radius: 50%;
-		background-size: 32px;
-		background-repeat: no-repeat;
-		background-position: center;
-		cursor: pointer;
-	}
-
-	.resume-item-header {
-		display: flex;
-		align-items: center;
-		gap: 6px;
-		margin-bottom: 4px;
-
-		h3 {
-			text-transform: capitalize;
+	.item-content {
+		min-width: 530px;
+		word-break: keep-all;
+		
+		@include small-screen {
+			min-width: 360px;
 		}
 
-		p {
-			color: #707070;
-		}
-	}
-
-	.resume-item-body {
-		max-width: 480px;
-		font-size: 16px;
-		margin-bottom: 8px;
-
-		.description {
-			line-height: 1.5;
-			font-weight: 300;
-			margin-bottom: 8px;
-		}
-
-		.task {
-			font-weight: 300;
-
-			&::before {
-				content: "-";
-				margin-right: 4px;
-			}
-		}
-
-	}
-
-	.resume-item-footer {
-		.label {
-			margin-bottom: 4px;
-		}
-
-		div {
+		.item-header {
 			display: flex;
-			gap: 8px;
-			margin-bottom: 8px;
+			gap: 6px;
+			margin-bottom: 4px;
 
-			img {
-				cursor: pointer;
+			div:first-of-type {
+				width: 36px;
+				display: flex;
+
+				a {
+					min-width: 32px;
+					height: 32px;
+					border: 1px solid #dadce0;
+					border-radius: 50%;
+					background-size: 32px;
+					background-repeat: no-repeat;
+					background-position: center;
+					cursor: pointer;
+				}
 			}
 
-			.tooltip {
-				position: relative;
+			h3 {
+				text-transform: capitalize;
+			}
+
+			p {
+				color: #707070;
+			}
+
+			.resume-dates-small-screen {
+				display: none;
+			}
+		}
+
+		.item-body {
+			max-width: 480px;
+			font-size: 16px;
+			margin-bottom: 8px;
+			margin-left: calc(36px + 6px); // link width + gap
+
+			.description {
+				line-height: 1.5;
+				font-weight: 300;
+				margin-bottom: 8px;
+			}
+
+			.task {
+				font-weight: 300;
 
 				&::before {
-					--scale: 0;
+					content: "-";
+					margin-right: 4px;
+					
+					@include small-screen {
+						display: none;
+					}
+				}
+			}
 
-					content: attr(data-tooltip);
-					position: absolute;
-					top: -8px;
-					left: 50%;
-					border-radius: 6px;
-					padding: 4px 8px;
-					background-color: rgba($color: #272424, $alpha: .9);
-					color: #fff;
-					font-size: 16px;
-					text-transform: capitalize;
-					transform: translateX(-50%) translateY(-100%) scale(var(--scale));
-					transition: transform 150ms;
+		}
+
+		.item-footer {
+			margin-left: calc(36px + 6px); // link width + gap
+
+			.label {
+				margin-bottom: 4px;
+			}
+
+			div {
+				display: flex;
+				gap: 8px;
+				margin-bottom: 8px;
+
+				img {
+					cursor: pointer;
 				}
 
-				&:hover::before {
-					--scale: 1;
+				// TODO: Externalize in component 
+				.tooltip {
+					position: relative;
+
+					&::before {
+						--scale: 0;
+
+						content: attr(data-tooltip);
+						position: absolute;
+						top: -8px;
+						left: 50%;
+						border-radius: 6px;
+						padding: 4px 8px;
+						background-color: rgba($color: #272424, $alpha: .9);
+						color: #fff;
+						font-size: 16px;
+						text-transform: capitalize;
+						transform: translateX(-50%) translateY(-100%) scale(var(--scale));
+						transition: transform 150ms;
+					}
+
+					&:hover::before {
+						--scale: 1;
+					}
 				}
 			}
 		}

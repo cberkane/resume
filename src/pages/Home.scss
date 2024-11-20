@@ -1,73 +1,106 @@
+@import "./../styles/theme";
+
 .page-home-section {
 	display: flex;
 	justify-content: center;
 	margin-block: 80px;
-	
+
 	.page-home-landing {
 		display: flex;
+		justify-content: center;
+		flex-wrap: wrap-reverse;
 		gap: 32px;
-		
-		> img {
-			height: 480px;
+
+		>img {
 			width: 480px;
+			height: 480px;
 			border-radius: 1000px;
+
+			@include small-screen {
+				width: 340px;
+				height: 340px;
+			}
 		}
-		
-		> div {
+
+		>div {
 			width: 480px;
 			display: flex;
 			flex-direction: column;
 			gap: 18px;
-			
-			.page-home-landing-title { 
+
+			@include small-screen {
+				width: auto;
+			}
+
+			.page-home-landing-title {
 				font-size: 100px;
 				font-weight: 600;
+
+				@include small-screen {
+					font-size: 42px;
+					padding-inline: 8px;
+				}
 			}
-			
+
 			.page-home-landing-text {
 				padding-inline: 8px;
+
 				p:first-of-type {
 					font-size: 22px;
 					font-weight: 600;
 					margin-bottom: 8px;
 				}
+
 				p:last-of-type {
 					font-size: 16px;
-    				line-height: 26px;
-    				font-weight: 400;
+					line-height: 26px;
+					font-weight: 400;
 					max-width: 360px;
 				}
 			}
-			
+
 			.page-home-landing-action {
 				display: flex;
 				gap: 16px;
-				
+
+				@include small-screen {
+					justify-content: center;
+				}
+
 				// TODO: put in it's own component
 				.round-btn {
-					height: 140px;	
+					height: 140px;
 					width: 140px;
 					border: 1px solid;
 					border-radius: 1000px;
 					transition: background-color 600ms;
 					font-size: 20px;
 					font-weight: 600;
+
+					@include small-screen {
+						width: 100px;
+						height: 100px;
+						font-size: 14px;
+					}
+
 					&.orange {
 						background-color: #eea302;
 					}
+
 					&.red {
 						background-color: #ff3b25;
 					}
+
 					&.azure {
 						background-color: #80d8da;
 					}
+
 					&:hover {
 						background-color: inherit;
 					}
 				}
 			}
-			
+
 		}
 	}
 }
-

@@ -11,12 +11,15 @@
 [x] - Ajout d'un padding pour le corps des pages
 [x] - Rédiger le hello (me)
 [x] - Changer de nom de domaine
-[] - Implémenter le design responsive
+[x] - Implémenter un design responsive minimal
+	-> sur toutes les pages
+	-> Navbar et footer
+[x] - mettre les dates sur les educations
+[] - regler le problème du routing
+[] - arrondir les skills
 [] - Prendre la photo
-[] - mettre les dates sur les educations
 [] - Tester sur écrans larges
 [] - Checker les todos
-[] - arrondir les skills
 [] - refactorer les couleurs
 [] - ajouter le ripple effect
 [] - ajouter les animations
@@ -25,3 +28,5 @@
 [] - Refactor le css des page sections
 [] - Checker les commentaires todo
 [] - Controller l'envoi du formulaire
+[] - See who sass @use works and use it
+[] - Gridify the resumeItem

@@ -7,7 +7,7 @@ import { me } from "../data/me";
 import "./Skills.scss";
 
 const Skills: React.FC = () => {
-	
+
 	useEffect(() => {
 		document.title = `${me.firstName} - Compétences`;
 	});
@@ -22,7 +22,7 @@ const Skills: React.FC = () => {
 
 	return (
 		<section className="page-skills-section">
-			<h1>Mes compétences</h1>
+			<h1>Compétences</h1>
 			<div className="skill-container">
 				<div className="aside">
 					<h2>Langages informatiques</h2>
@@ -32,10 +32,12 @@ const Skills: React.FC = () => {
 						.filter(skill => skill.category === SkillCategory.Langage)
 						.map(skill => (
 							<div className="skill-item">
-								<Icon iconName={skill.icon} size={36} />
+								<div className="icon-container">
+									<Icon iconName={skill.icon} size={44} />
+								</div>
 								<div>
 									<p className="title">{skill.title}</p>
-									<p>Niveau <span style={{ fontWeight: 600 }}>{translateProficiency(skill.proficiency)}</span></p>
+									<p className="proficiency">Niveau <span>{translateProficiency(skill.proficiency)}</span></p>
 								</div>
 							</div>
 						))
@@ -52,10 +54,10 @@ const Skills: React.FC = () => {
 						.filter(skill => skill.category === SkillCategory.Framework)
 						.map(skill => (
 							<div className="skill-item">
-								<Icon iconName={skill.icon} size={36} />
+								<Icon iconName={skill.icon} size={44} />
 								<div>
 									<p className="title">{skill.title}</p>
-									<p>Niveau <span style={{ fontWeight: 600 }}>{translateProficiency(skill.proficiency)}</span></p>
+									<p className="proficiency">Niveau <span>{translateProficiency(skill.proficiency)}</span></p>
 								</div>
 							</div>
 						))
@@ -72,7 +74,7 @@ const Skills: React.FC = () => {
 						.filter(skill => skill.category === SkillCategory.Tool)
 						.map(skill => (
 							<div className="skill-item">
-								<Icon iconName={skill.icon} size={36} />
+								<Icon iconName={skill.icon} size={44} />
 								<div>
 									<p className="title">{skill.title}</p>
 									<p>{skill.remark}</p>

@@ -1,3 +1,5 @@
+@import "./../styles/theme";
+
 // Inputs styles. TODO: put in it's own component
 .input-text,
 .input-textarea {
@@ -35,30 +37,49 @@
 
 .page-contact-section {
 	margin-block: 80px;
-	
+
 	h1 {
 		font-size: 44px;
 		margin-bottom: 44px;
+		
+		@include small-screen {
+			font-size: 34px;
+			text-align: center;
+		}
 	}
 
 	.contact-container {
 		display: flex;
+		flex-wrap: wrap;
 
 		.aside {
-			flex: 1;
-			padding-top: 14px ;
-			
+			flex: 1 0 auto;
+			padding-top: 14px;
+
+			@include small-screen {
+
+				h2,
+				p {
+					margin-left: 24px;
+				}
+			}
+
+
 			.info {
 				font-weight: 300;
 			}
-			
+
 			.aside-item {
 				margin-bottom: 12px;
-				
+
+				@include small-screen {
+					display: none;
+				}
+
 				&:first-of-type {
 					margin-top: 26px;
 				}
-				
+
 				.info {
 					font-weight: 300;
 				}
@@ -67,6 +88,10 @@
 
 		.body {
 			flex: 2;
+
+			@include small-screen {
+				flex: 2 0 360px;
+			}
 		}
 	}
 
@@ -82,24 +107,33 @@
 		.input-text {
 			grid-column: 2 span;
 			height: 90px;
+
+			@include tablet {
+				grid-column: 4 span;
+			}
+
+			@include small-screen {
+				grid-column: 4 span;
+			}
 		}
 
 		.input-textarea {
 			grid-column: 3 span;
 			height: 200px;
-			
-			.submit-error, .submit-success {
+
+			.submit-error,
+			.submit-success {
 				display: flex;
 				align-items: center;
 				gap: 4px;
-				font-size: 16px;	
+				font-size: 16px;
 				margin-top: 8px;
 			}
-			
+
 			.submit-error {
 				color: rgb(255, 64, 64);
 			}
-			
+
 			.submit-success {
 				color: rgb(52, 129, 49);
 			}

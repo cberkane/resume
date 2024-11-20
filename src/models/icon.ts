@@ -1,5 +1,6 @@
 export enum IconName {
 	Angular = "angular",
+	Burger = "burger",
 	Cypress = "cypress",
 	Debian = "debian",
 	Django = "django",

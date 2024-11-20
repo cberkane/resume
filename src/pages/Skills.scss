@@ -1,39 +1,68 @@
+@import "./../styles/theme.scss";
+
 .page-skills-section {
 	margin-block: 80px;
 
 	h1 {
 		font-size: 44px;
 		margin-bottom: 44px;
+
+		@include small-screen {
+			font-size: 34px;
+			text-align: center;
+		}
 	}
 
 	.skill-container {
 		display: flex;
+		flex-wrap: wrap;
+		gap: 24px;
 		margin-bottom: 24px;
 
 		.aside {
-			flex: 1;
+			flex: 1 0 0px;
+
+			@include small-screen {
+				flex: 1 0 360px;
+
+				h2 {
+					font-size: 20px;
+				}
+			}
 		}
 
 		.body {
-			flex: 2;
+			flex: 1 0 0px;
 			display: flex;
 			flex-direction: column;
 			gap: 18px;
 			padding-block: 3px;
 
-			.title {
-				font-size: 18px;
+			@include small-screen {
+				flex: 1 0 360px;
 			}
 
 			.skill-item {
 				display: flex;
 				align-items: center;
 				gap: 12px;
-				padding-left: 200px;
+
+				.title {
+					font-size: 18px;
+					font-weight: 300;
+				}
+
+				.proficiency {
+					font-weight: 300;
+
+					span {
+						font-weight: 400;
+					}
+				}
 			}
 		}
 	}
-	
+
 	hr {
 		border: none;
 		border-top: 1px solid #c7c7c7;

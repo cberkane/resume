@@ -9,30 +9,30 @@ const ResumeItem: React.FC<{ experience?: Experience, education?: Education, cla
 
 	return (
 		<div className={`resume-item ${className}`}>
-			<div className="resume-item-aside">
-				<span>{experience?.startDate || education?.startDate}</span> - <span>{(experience?.endDate || experience?.endDate) ?? "aujourd'hui"}</span>
+			<div className="item-aside">
+				<span>{experience?.startDate || education?.startDate}</span> - <span>{(experience?.endDate || education?.endDate) ?? "aujourd'hui"}</span>
 			</div>
-			<a className="resume-item-link"
-				href={experience?.companyHref}
-				target="_blank"
-				style={{
-					backgroundImage: `url("${experience?.companyImg ?? education?.img}")`
-				}}
-			/>
 			{experience &&
-				<div>
-					<div className="resume-item-header">
+				<div className="item-content">
+					<div className="item-header">
+						<div>
+							<a href={experience?.companyHref}
+								target="_blank"
+								style={{ backgroundImage: `url("${experience?.companyImg}")` }}
+							/>
+						</div>
 						<div>
 							<h3>{experience.jobTitle}</h3>
 							<p>Chez {experience.companyName}</p>
+							<p className="resume-dates-small-screen">De {experience?.startDate || education?.startDate} à {(experience?.endDate || experience?.endDate) ?? "aujourd'hui"}</p>
 						</div>
 					</div>
-					<div className="resume-item-body">
+					<div className="item-body">
 						<p className="description">{experience.description}</p>
 						<p className="label">Taches :</p>
 						{experience.tasks?.map(task => <p className="task">{task}</p>)}
 					</div>
-					<div className="resume-item-footer">
+					<div className="item-footer">
 						<p className="label">Technos :</p>
 						<div>
 							{experience.technologies?.map((tech, i) =>
@@ -52,8 +52,14 @@ const ResumeItem: React.FC<{ experience?: Experience, education?: Education, cla
 				</div>
 			}
 			{education &&
-				<div>
-					<div className="resume-item-header">
+				<div className="item-content">
+					<div className="item-header">
+						<div>
+							<a href={education?.href}
+								target="_blank"
+								style={{ backgroundImage: `url("${education?.img}")` }}
+							/>
+						</div>
 						<div>
 							<h3>{education.title}</h3>
 							<p>{education.schoolName}</p>

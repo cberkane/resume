@@ -10,6 +10,14 @@
 		padding: 3px 0;
 		text-align: right;
 
+		@include tablet {
+			text-align: left;
+		}
+
+		@include small-screen {
+			text-align: left;
+		}
+
 		span {
 			font-weight: 300;
 			text-transform: capitalize;
@@ -17,16 +25,12 @@
 	}
 
 	.item-content {
-		min-width: 530px;
 		word-break: keep-all;
 		
-		@include small-screen {
-			min-width: 360px;
-		}
-
 		.item-header {
 			display: flex;
 			gap: 6px;
+			min-width: 530px;
 			margin-bottom: 4px;
 
 			div:first-of-type {
@@ -52,10 +56,6 @@
 			p {
 				color: #707070;
 			}
-
-			.resume-dates-small-screen {
-				display: none;
-			}
 		}
 
 		.item-body {
@@ -63,7 +63,11 @@
 			font-size: 16px;
 			margin-bottom: 8px;
 			margin-left: calc(36px + 6px); // link width + gap
-
+			
+			@include small-screen {
+				max-width: clamp(300px, 80vw, 480px);
+			}
+			
 			.description {
 				line-height: 1.5;
 				font-weight: 300;
@@ -71,12 +75,13 @@
 			}
 
 			.task {
+				line-height: 1.5;
 				font-weight: 300;
 
 				&::before {
 					content: "-";
 					margin-right: 4px;
-					
+
 					@include small-screen {
 						display: none;
 					}
@@ -97,34 +102,19 @@
 				gap: 8px;
 				margin-bottom: 8px;
 
-				img {
-					cursor: pointer;
-				}
-
-				// TODO: Externalize in component 
-				.tooltip {
-					position: relative;
-
-					&::before {
-						--scale: 0;
-
-						content: attr(data-tooltip);
-						position: absolute;
-						top: -8px;
-						left: 50%;
-						border-radius: 6px;
-						padding: 4px 8px;
-						background-color: rgba($color: #272424, $alpha: .9);
-						color: #fff;
-						font-size: 16px;
-						text-transform: capitalize;
-						transform: translateX(-50%) translateY(-100%) scale(var(--scale));
-						transition: transform 150ms;
-					}
-
-					&:hover::before {
-						--scale: 1;
-					}
+				// TODO: isolate in component
+				.chip {
+					display: flex;
+					align-items: center;
+					gap: 4px;
+					padding: 3px 8px;
+					border: 1px solid #dadce0;
+					border-radius: 12px;
+					background-color: lighten($color: #dadce0, $amount: 10%);
+					color: darken($color: #dadce0, $amount: 70%);
+					font-size: 14px;
+					font-weight: 500;
+					text-transform: capitalize;
 				}
 			}
 		}

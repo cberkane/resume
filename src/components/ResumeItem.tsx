@@ -1,11 +1,14 @@
 import React from "react";
 import Icon from "./Icon";
+import Tooltip from "./Tooltip";
 import { Experience } from "src/models/experience";
 import { Education } from "src/models/education";
 
 import "./ResumeItem.scss";
 
 const ResumeItem: React.FC<{ experience?: Experience, education?: Education, className?: string }> = ({ experience, education, className }) => {
+
+	const showTooltip = true;
 
 	return (
 		<div className={`resume-item ${className}`}>
@@ -24,7 +27,6 @@ const ResumeItem: React.FC<{ experience?: Experience, education?: Education, cla
 						<div>
 							<h3>{experience.jobTitle}</h3>
 							<p>Chez {experience.companyName}</p>
-							<p className="resume-dates-small-screen">De {experience?.startDate || education?.startDate} à {(experience?.endDate || experience?.endDate) ?? "aujourd'hui"}</p>
 						</div>
 					</div>
 					<div className="item-body">
@@ -35,16 +37,26 @@ const ResumeItem: React.FC<{ experience?: Experience, education?: Education, cla
 					<div className="item-footer">
 						<p className="label">Technos :</p>
 						<div>
-							{experience.technologies?.map((tech, i) =>
-								<span className="tooltip" data-tooltip={tech} key={`resume-item-tech-${i}`}>
+							{experience.technologies?.map(tech => showTooltip ?
+								<Tooltip title={tech}>
 									<Icon iconName={tech} />
+								</Tooltip>
+								:
+								<span className="chip">
+									<Icon iconName={tech} size={22} />
+									{tech}
 								</span>
 							)}
 						</div>
 						<div>
-							{experience.environment?.map((env, i) =>
-								<span className="tooltip" data-tooltip={env} key={`resume-item-env-${i}`}>
+							{experience.environment?.map(env => showTooltip ?
+								<span className="tooltip" data-tooltip={env} >
 									<Icon iconName={env} />
+								</span>
+								: 
+								<span className="chip">
+									<Icon iconName={env} size={22} />
+									{env}
 								</span>
 							)}
 						</div>

@@ -120,6 +120,10 @@
 		.input-textarea {
 			grid-column: 3 span;
 			height: 200px;
+			
+			@include small-screen {
+				grid-column: 4 span;
+			}
 
 			.submit-error,
 			.submit-success {
@@ -145,16 +149,29 @@
 			justify-content: center;
 			align-items: center;
 			height: 200px;
+			
+			@include small-screen {
+				height: auto;
+				grid-column: 4 span;
+			}
 
 			.round-btn {
-				height: 140px;
 				width: 140px;
+				height: 140px;
 				border: 1px solid;
 				border-radius: 1000px;
 				transition: background-color 600ms;
 				font-size: 22px;
 				font-weight: 600;
 				background-color: #eea302;
+				
+				@include small-screen {
+					width: auto;
+					height: auto;
+					padding: 16px 22px;
+					margin: 0 auto;
+					font-size: 18px;
+				}
 
 				&:hover {
 					background-color: inherit;

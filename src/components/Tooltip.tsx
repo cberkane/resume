@@ -2,9 +2,16 @@ import React from "react";
 
 import "./Tooltip.scss";
 
-const Tooltip: React.FC<{ children: React.ReactNode, title: string }> = ({ children, title }) => {
+interface TooltipProps {
+	children: React.ReactNode;
+	className: string;
+	title: string;
+}
+
+
+const Tooltip: React.FC<TooltipProps> = ({ children, className, title }) => {
 	return (
-		<span className="tooltip" data-tooltip={title}>
+		<span className={`tooltip ${className}`} data-tooltip={title}>
 			{children}
 		</span>
 	);

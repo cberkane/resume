@@ -26,7 +26,7 @@
 
 	.item-content {
 		word-break: keep-all;
-		
+
 		.item-header {
 			display: flex;
 			gap: 6px;
@@ -63,11 +63,11 @@
 			font-size: 16px;
 			margin-bottom: 8px;
 			margin-left: calc(36px + 6px); // link width + gap
-			
+
 			@include small-screen {
 				max-width: clamp(300px, 80vw, 480px);
 			}
-			
+
 			.description {
 				line-height: 1.5;
 				font-weight: 300;
@@ -115,6 +115,18 @@
 					font-size: 14px;
 					font-weight: 500;
 					text-transform: capitalize;
+
+					@include small-screen {
+						display: none;
+					}
+				}
+
+				.tooltip {
+					display: none;
+
+					@include small-screen {
+						display: block;
+					}
 				}
 			}
 		}

@@ -8,8 +8,6 @@ import "./ResumeItem.scss";
 
 const ResumeItem: React.FC<{ experience?: Experience, education?: Education, className?: string }> = ({ experience, education, className }) => {
 
-	const showTooltip = true;
-
 	return (
 		<div className={`resume-item ${className}`}>
 			<div className="item-aside">
@@ -37,27 +35,27 @@ const ResumeItem: React.FC<{ experience?: Experience, education?: Education, cla
 					<div className="item-footer">
 						<p className="label">Technos :</p>
 						<div>
-							{experience.technologies?.map(tech => showTooltip ?
-								<Tooltip title={tech}>
+							{experience.technologies?.map(tech => <>
+								<Tooltip className="tooltip" title={tech}>
 									<Icon iconName={tech} />
 								</Tooltip>
-								:
 								<span className="chip">
 									<Icon iconName={tech} size={22} />
 									{tech}
 								</span>
+							</>
 							)}
 						</div>
 						<div>
-							{experience.environment?.map(env => showTooltip ?
-								<span className="tooltip" data-tooltip={env} >
+							{experience.environment?.map(env => <>
+								<Tooltip className="tooltip" title={env}>
 									<Icon iconName={env} />
-								</span>
-								: 
+								</Tooltip>
 								<span className="chip">
 									<Icon iconName={env} size={22} />
 									{env}
 								</span>
+							</>
 							)}
 						</div>
 					</div>

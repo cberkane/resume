@@ -29,4 +29,6 @@ export enum IconName {
 	Typescript = "typescript",
 	Ubuntu = "ubuntu",
 	Vscode = "vscode",
+	French = "french",
+	English = "english",
 }

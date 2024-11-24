@@ -92,4 +92,16 @@ export const skills: Skill[] = [
 		remark: "Utilisation quotidienne",
 		category: SkillCategory.Tool,
 	},
+	{
+		title: "Français",
+		icon: IconName.French,
+		remark: "Courant",
+		category: SkillCategory.Lang,
+	},
+	{
+		title: "Anglais",
+		icon: IconName.English,
+		remark: "Niveau B2",
+		category: SkillCategory.Lang,
+	},
 ];

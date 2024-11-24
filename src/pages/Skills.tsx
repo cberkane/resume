@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Icon from "../components/Icon";
 import { skills } from "../data/skills";
-import { Proficiency, SkillCategory } from "../models/skill";
+import { Proficiency, Skill, SkillCategory } from "../models/skill";
 import { me } from "../data/me";
 
 import "./Skills.scss";
@@ -20,6 +20,19 @@ const Skills: React.FC = () => {
 		}
 	}
 
+	const skillItem = (skill: Skill) => {
+		return (
+			<div className="skill-item">
+				<Icon iconName={skill.icon} size={44} />
+				<div>
+					<p className="title">{skill.title}</p>
+					{skill.proficiency && <p className="proficiency">Niveau <span>{translateProficiency(skill.proficiency)}</span></p>}
+					{skill.remark && <p>{skill.remark}</p>}
+				</div>
+			</div>
+		)
+	}
+
 	return (
 		<section className="page-skills-section">
 			<h1>Compétences</h1>
@@ -30,17 +43,7 @@ const Skills: React.FC = () => {
 				<div className="body">
 					{skills
 						.filter(skill => skill.category === SkillCategory.Langage)
-						.map(skill => (
-							<div className="skill-item">
-								<div className="icon-container">
-									<Icon iconName={skill.icon} size={44} />
-								</div>
-								<div>
-									<p className="title">{skill.title}</p>
-									<p className="proficiency">Niveau <span>{translateProficiency(skill.proficiency)}</span></p>
-								</div>
-							</div>
-						))
+						.map(skill => skillItem(skill))
 					}
 				</div>
 			</div>
@@ -52,35 +55,19 @@ const Skills: React.FC = () => {
 				<div className="body">
 					{skills
 						.filter(skill => skill.category === SkillCategory.Framework)
-						.map(skill => (
-							<div className="skill-item">
-								<Icon iconName={skill.icon} size={44} />
-								<div>
-									<p className="title">{skill.title}</p>
-									<p className="proficiency">Niveau <span>{translateProficiency(skill.proficiency)}</span></p>
-								</div>
-							</div>
-						))
+						.map(skill => skillItem(skill))
 					}
 				</div>
 			</div>
 			<hr />
 			<div className="skill-container">
 				<div className="aside">
-					<h2>Outils</h2>
+					<h2>Langues</h2>
 				</div>
 				<div className="body">
 					{skills
-						.filter(skill => skill.category === SkillCategory.Tool)
-						.map(skill => (
-							<div className="skill-item">
-								<Icon iconName={skill.icon} size={44} />
-								<div>
-									<p className="title">{skill.title}</p>
-									<p>{skill.remark}</p>
-								</div>
-							</div>
-						))
+						.filter(skill => skill.category === SkillCategory.Lang)
+						.map(skill => (skillItem(skill)))
 					}
 				</div>
 			</div>

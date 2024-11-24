@@ -18,4 +18,5 @@ export enum SkillCategory {
 	Langage = 'langage',
 	Framework = 'framework',
 	Tool = 'tool',
+	Lang = 'lang'
 }

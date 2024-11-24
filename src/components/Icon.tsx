@@ -31,6 +31,8 @@ import success from "../assets/icons/success.svg";
 import typescript from "../assets/icons/typescript.svg";
 import ubuntu from "../assets/icons/ubuntu.svg";
 import vscode from "../assets/icons/vscode.svg";
+import french from "../assets/icons/french.svg";
+import english from "../assets/icons/english.svg";
 
 export const icons = {
 	"angular": angular,
@@ -63,6 +65,8 @@ export const icons = {
 	"typescript": typescript,
 	"ubuntu": ubuntu,
 	"vscode": vscode,
+	"french": french,
+	"english": english
 }
 
 

@@ -1,6 +1,7 @@
 import React, { ChangeEvent, SyntheticEvent, useEffect, useState } from "react";
 import emailjs from '@emailjs/browser';
 import Icon from "../components/Icon";
+import { motion } from "framer-motion";
 import RoundButton from "../components/RoundButton";
 import { IconName } from "../models/icon";
 import { Validator } from "../utils/validators";
@@ -91,71 +92,78 @@ const Contact: React.FC = () => {
 		}
 	}
 
-	return <>
-		<section className="page-contact-section">
-			<h1>Contact</h1>
-			<div className="contact-container">
-				<div className="aside">
-					<h2>Mes coordonnées</h2>
-					<p className="info">Au plaisir de vous lire prochainement.</p>
-					<div className="aside-item">
-						<p className="title">Téléphone</p>
-						<p className="info">{me.phoneNumber}</p>
+	return (
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			transition={{ duration: 0.5 }}
+		>
+			<section className="page-contact-section">
+				<h1>Contact</h1>
+				<div className="contact-container">
+					<div className="aside">
+						<h2>Mes coordonnées</h2>
+						<p className="info">Au plaisir de vous lire prochainement.</p>
+						<div className="aside-item">
+							<p className="title">Téléphone</p>
+							<p className="info">{me.phoneNumber}</p>
+						</div>
+						<div className="aside-item">
+							<p className="title">Email</p>
+							<p className="info">{me.email}</p>
+						</div>
+						<div className="aside-item">
+							<p className="title">Adresse</p>
+							<p className="info">{me.location}</p>
+						</div>
 					</div>
-					<div className="aside-item">
-						<p className="title">Email</p>
-						<p className="info">{me.email}</p>
-					</div>
-					<div className="aside-item">
-						<p className="title">Adresse</p>
-						<p className="info">{me.location}</p>
+					<div className="body">
+						<form onSubmit={handleSubmit} className="form-grid">
+							<div className={`input-text`}>
+								<label htmlFor="firstName">First name</label>
+								<input type="text" name="firstName" value={formValues.firstName} onChange={handleInputChange} />
+							</div>
+							<div className={`input-text`}>
+								<label htmlFor="name">Last name</label>
+								<input type="text" name="lastName" value={formValues.lastName} onChange={handleInputChange} />
+							</div>
+							<div className={`input-text ${formErrors.email && "error"}`}>
+								<label htmlFor="email">Email *</label>
+								<input type="text" name="email" value={formValues.email} onChange={handleInputChange} />
+								{formErrors.email &&
+									<p className="error-info"><Icon iconName={IconName.Info} size={16} />{Validator.translateError(formErrors.email)}</p>
+								}
+							</div>
+							<div className={`input-text ${formErrors.subject && "error"}`}>
+								<label htmlFor="subject">Objet *</label>
+								<input type="text" name="subject" value={formValues.subject} onChange={handleInputChange} />
+								{formErrors.subject &&
+									<p className="error-info"><Icon iconName={IconName.Info} size={16} />{Validator.translateError(formErrors.subject)}</p>
+								}
+							</div>
+							<div className={`input-textarea ${formErrors.message && "error"}`}>
+								<label htmlFor="message">Message *</label>
+								<textarea name="message" rows={6} value={formValues.message} onChange={handleInputChange}></textarea>
+								{formErrors.message &&
+									<p className="error-info"><Icon iconName={IconName.Info} size={16} />{Validator.translateError(formErrors.message)}</p>
+								}
+								{errorMessage &&
+									<p className="submit-error"><Icon iconName={IconName.Info} size={16} />{errorMessage}</p>
+								}
+								{successMessage &&
+									<p className="submit-success"><Icon iconName={IconName.Success} size={16} />{successMessage}</p>
+								}
+							</div>
+							<div className="submit-container">
+								<RoundButton variant="orange">Envoyer</RoundButton>
+							</div>
+						</form>
 					</div>
 				</div>
-				<div className="body">
-					<form onSubmit={handleSubmit} className="form-grid">
-						<div className={`input-text`}>
-							<label htmlFor="firstName">First name</label>
-							<input type="text" name="firstName" value={formValues.firstName} onChange={handleInputChange} />
-						</div>
-						<div className={`input-text`}>
-							<label htmlFor="name">Last name</label>
-							<input type="text" name="lastName" value={formValues.lastName} onChange={handleInputChange} />
-						</div>
-						<div className={`input-text ${formErrors.email && "error"}`}>
-							<label htmlFor="email">Email *</label>
-							<input type="text" name="email" value={formValues.email} onChange={handleInputChange} />
-							{formErrors.email &&
-								<p className="error-info"><Icon iconName={IconName.Info} size={16} />{Validator.translateError(formErrors.email)}</p>
-							}
-						</div>
-						<div className={`input-text ${formErrors.subject && "error"}`}>
-							<label htmlFor="subject">Objet *</label>
-							<input type="text" name="subject" value={formValues.subject} onChange={handleInputChange} />
-							{formErrors.subject &&
-								<p className="error-info"><Icon iconName={IconName.Info} size={16} />{Validator.translateError(formErrors.subject)}</p>
-							}
-						</div>
-						<div className={`input-textarea ${formErrors.message && "error"}`}>
-							<label htmlFor="message">Message *</label>
-							<textarea name="message" rows={6} value={formValues.message} onChange={handleInputChange}></textarea>
-							{formErrors.message &&
-								<p className="error-info"><Icon iconName={IconName.Info} size={16} />{Validator.translateError(formErrors.message)}</p>
-							}
-							{errorMessage &&
-								<p className="submit-error"><Icon iconName={IconName.Info} size={16} />{errorMessage}</p>
-							}
-							{successMessage &&
-								<p className="submit-success"><Icon iconName={IconName.Success} size={16} />{successMessage}</p>
-							}
-						</div>
-						<div className="submit-container">
-							<RoundButton variant="orange">Envoyer</RoundButton>
-						</div>
-					</form>
-				</div>
-			</div>
-		</section>
-	</>
+			</section>
+		</motion.div>
+	);
 }
 
 export default Contact;

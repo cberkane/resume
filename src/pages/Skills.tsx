@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { motion } from "framer-motion";
 import Icon from "../components/Icon";
 import { skills } from "../data/skills";
 import { Proficiency, Skill, SkillCategory } from "../models/skill";
@@ -34,44 +35,51 @@ const Skills: React.FC = () => {
 	}
 
 	return (
-		<section className="page-skills-section">
-			<h1>Compétences</h1>
-			<div className="skill-container">
-				<div className="aside">
-					<h2>Langages informatiques</h2>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			transition={{ duration: 0.5 }}
+		>
+			<section className="page-skills-section">
+				<h1>Compétences</h1>
+				<div className="skill-container">
+					<div className="aside">
+						<h2>Langages informatiques</h2>
+					</div>
+					<div className="body">
+						{skills
+							.filter(skill => skill.category === SkillCategory.Langage)
+							.map(skill => skillItem(skill))
+						}
+					</div>
 				</div>
-				<div className="body">
-					{skills
-						.filter(skill => skill.category === SkillCategory.Langage)
-						.map(skill => skillItem(skill))
-					}
+				<hr />
+				<div className="skill-container">
+					<div className="aside">
+						<h2>Technos</h2>
+					</div>
+					<div className="body">
+						{skills
+							.filter(skill => skill.category === SkillCategory.Framework)
+							.map(skill => skillItem(skill))
+						}
+					</div>
 				</div>
-			</div>
-			<hr />
-			<div className="skill-container">
-				<div className="aside">
-					<h2>Technos</h2>
+				<hr />
+				<div className="skill-container">
+					<div className="aside">
+						<h2>Langues</h2>
+					</div>
+					<div className="body">
+						{skills
+							.filter(skill => skill.category === SkillCategory.Lang)
+							.map(skill => (skillItem(skill)))
+						}
+					</div>
 				</div>
-				<div className="body">
-					{skills
-						.filter(skill => skill.category === SkillCategory.Framework)
-						.map(skill => skillItem(skill))
-					}
-				</div>
-			</div>
-			<hr />
-			<div className="skill-container">
-				<div className="aside">
-					<h2>Langues</h2>
-				</div>
-				<div className="body">
-					{skills
-						.filter(skill => skill.category === SkillCategory.Lang)
-						.map(skill => (skillItem(skill)))
-					}
-				</div>
-			</div>
-		</section>
+			</section>
+		</motion.div>
 	);
 }
 

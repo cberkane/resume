@@ -18,7 +18,11 @@
 		flex-wrap: wrap;
 		gap: 24px;
 		margin-bottom: 24px;
-
+		
+		@include small-screen {
+			padding: 0 20px;
+		}
+		
 		.aside {
 			flex: 1 0 0px;
 

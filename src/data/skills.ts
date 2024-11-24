@@ -45,9 +45,9 @@ export const skills: Skill[] = [
 		category: SkillCategory.Framework,
 	},
 	{
-		title: "RxJS",
-		icon: IconName.Rxjs,
-		proficiency: Proficiency.Advanced,
+		title: "React",
+		icon: IconName.React,
+		proficiency: Proficiency.Intermediate,
 		category: SkillCategory.Framework,
 	},
 	{
@@ -57,9 +57,15 @@ export const skills: Skill[] = [
 		category: SkillCategory.Framework,
 	},
 	{
-		title: "React",
-		icon: IconName.React,
-		proficiency: Proficiency.Beginner,
+		title: "Cypress",
+		icon: IconName.Cypress,
+		proficiency: Proficiency.Advanced,
+		category: SkillCategory.Framework,	
+	},
+	{
+		title: "RxJS",
+		icon: IconName.Rxjs,
+		proficiency: Proficiency.Advanced,
 		category: SkillCategory.Framework,
 	},
 	{

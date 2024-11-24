@@ -10,7 +10,7 @@ const Resume: React.FC = () => {
 
 	useEffect(() => {
 		document.title = `${me.firstName} - Mon CV`;
-	});
+	}, []);
 
 	return (
 		<section className="page-resume-section">

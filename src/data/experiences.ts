@@ -8,7 +8,7 @@ import cgi from "../assets/images/CGI.png";
 export const experiences: Experience[] = [
 	{
 		jobTitle: "software engineer",
-		description: "Société leader dans l’Open Finance où j'ai participé au développement d'outils web pour configurer nos solutions d'agrégations financière.",
+		description: "Société leader dans l’Open Finance où j'ai participé au développement d'outils web pour configurer nos solutions d'agrégation financière.",
 		companyName: "Powens",
 		companyImg: powens,
 		companyHref: "https://www.powens.com",
@@ -19,7 +19,7 @@ export const experiences: Experience[] = [
 			"Création de composantes web personnalisées from scratch.",
 			"Refactoring, maintenance et d'optimisation de la performance.",
 			"Mise en place de scénarios de tests bout-en-bout.",
-			"Veille technique et contribution aux choix techniques",
+			"Audit, veille et contribution aux choix techniques.",
 		],
 		technologies: [
 			IconName.Angular,

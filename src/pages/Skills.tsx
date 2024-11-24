@@ -10,7 +10,7 @@ const Skills: React.FC = () => {
 
 	useEffect(() => {
 		document.title = `${me.firstName} - Compétences`;
-	});
+	}, []);
 
 	const translateProficiency = (arg?: Proficiency) => {
 		switch (arg) {

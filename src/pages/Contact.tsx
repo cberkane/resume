@@ -1,9 +1,10 @@
 import React, { ChangeEvent, SyntheticEvent, useEffect, useState } from "react";
 import emailjs from '@emailjs/browser';
+import Icon from "../components/Icon";
+import RoundButton from "../components/RoundButton";
 import { IconName } from "../models/icon";
 import { Validator } from "../utils/validators";
 import { me } from "../data/me";
-import Icon from "../components/Icon";
 
 import "./Contact.scss";
 
@@ -19,7 +20,7 @@ const Contact: React.FC = () => {
 
 	useEffect(() => {
 		document.title = `${me.firstName} - Contact`;
-	});
+	}, []);
 
 	const [formValues, setFormValues] = useState<ContactFormValues>({
 		firstName: '',
@@ -148,7 +149,7 @@ const Contact: React.FC = () => {
 							}
 						</div>
 						<div className="submit-container">
-							<button className="round-btn" type="submit">Envoyer</button>
+							<RoundButton variant="orange">Envoyer</RoundButton>
 						</div>
 					</form>
 				</div>

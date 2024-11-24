@@ -1,0 +1,42 @@
+@import "./../styles/theme";
+
+.round-btn {
+	width: 140px;
+	height: 140px;
+	border: 1px solid;
+	border-radius: 50%;
+	font-size: 20px;
+	font-weight: 600;
+	transition: background-color 600ms;
+	
+	@include small-screen {
+		width: 100px;
+		height: 100px;
+		font-size: 14px;
+	}
+	
+	&.small {
+		width: 100px;
+		height: 100px;
+	}
+
+	&:hover {
+		background-color: inherit;
+	}
+
+	&.orange {
+		background-color: #eea302;
+	}
+
+	&.red {
+		background-color: #ff3b25;
+	}
+
+	&.azure {
+		background-color: #80d8da;
+	}
+	
+	&:hover {
+		background-color: transparent;
+	}
+}

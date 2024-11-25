@@ -3,13 +3,16 @@ import { IconName } from "../models/icon";
 
 import angular from "../assets/icons/angular.svg";
 import burger from "../assets/icons/burger.svg";
+import cross from "../assets/icons/cross.svg";
 import cypress from "../assets/icons/cypress.svg";
 import debian from "../assets/icons/debian.svg";
 import django from "../assets/icons/django.svg";
 import docker from "../assets/icons/docker.svg";
 import eclipse from "../assets/icons/eclipse.svg";
+import english from "../assets/icons/english.svg";
 import express from "../assets/icons/express.svg";
 import figma from "../assets/icons/figma.svg";
+import french from "../assets/icons/french.svg";
 import github from "../assets/icons/github.svg";
 import gitlab from "../assets/icons/gitlab.svg";
 import info from "../assets/icons/info.svg";
@@ -31,19 +34,20 @@ import success from "../assets/icons/success.svg";
 import typescript from "../assets/icons/typescript.svg";
 import ubuntu from "../assets/icons/ubuntu.svg";
 import vscode from "../assets/icons/vscode.svg";
-import french from "../assets/icons/french.svg";
-import english from "../assets/icons/english.svg";
 
 export const icons = {
 	"angular": angular,
 	"burger": burger,
+	"cross": cross,
 	"cypress": cypress,
 	"debian": debian,
 	"django": django,
 	"docker": docker,
 	"eclipse": eclipse,
+	"english": english,
 	"express": express,
 	"figma": figma,
+	"french": french,
 	"github": github,
 	"gitlab": gitlab,
 	"info": info,
@@ -65,10 +69,7 @@ export const icons = {
 	"typescript": typescript,
 	"ubuntu": ubuntu,
 	"vscode": vscode,
-	"french": french,
-	"english": english
 }
-
 
 interface MyComponentProps {
 	iconName: IconName;

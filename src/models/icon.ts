@@ -1,13 +1,16 @@
 export enum IconName {
 	Angular = "angular",
 	Burger = "burger",
+	Cross = "cross",
 	Cypress = "cypress",
 	Debian = "debian",
 	Django = "django",
 	Docker = "docker",
 	Eclipse = "eclipse",
+	English = "english",
 	Express = "express",
 	Figma = "figma",
+	French = "french",
 	Github = "github",
 	Gitlab = "gitlab",
 	Info = "info",
@@ -29,6 +32,4 @@ export enum IconName {
 	Typescript = "typescript",
 	Ubuntu = "ubuntu",
 	Vscode = "vscode",
-	French = "french",
-	English = "english",
 }

@@ -11,22 +11,23 @@ const Navbar: React.FC = () => {
     const [open, setOpen] = useState(false);
     const { pathname } = useLocation();
     const navigate = useNavigate();
-    
+
     const drawerStyle: React.CSSProperties = {
-        background: '#f3f3f3',
-        padding: '14px 28px',
+        display: 'flex',
+        alignItems: 'center',
         width: '80%',
         height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        padding: '14px 28px',
+        background: '#f3f3f3',
+        position: 'fixed',
+        top: 0
     }
 
     const drawerNavigate = (path: string) => {
         navigate(path);
         setOpen(false);
     };
-    
+
     return <>
         <nav className="navbar">
             <div className="navbar-brand" onClick={() => navigate("/home")}>
@@ -45,6 +46,11 @@ const Navbar: React.FC = () => {
             </button>
         </nav>
         <Drawer open={open} onClose={() => setOpen(false)} PaperProps={{ style: drawerStyle }}>
+            <div className="drawer-closer">
+                <button onClick={() => setOpen(false)}>
+                    <Icon iconName={IconName.Cross} />
+                </button>
+            </div>
             <ul className="drawer-items">
                 <li onClick={() => drawerNavigate("/resume")} className={pathname === "/resume" ? "active" : undefined}>Mon CV</li>
                 <li onClick={() => drawerNavigate("/skills")} className={pathname === "/skills" ? "active" : undefined}>Compétences</li>

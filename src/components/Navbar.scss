@@ -70,6 +70,14 @@
 	}
 }
 
+.drawer-closer {
+	display: flex;
+	justify-content: end;
+	width: 100%;
+	padding: 22px 0;
+	margin-bottom: 5rem;
+}
+
 .drawer-items {
 	font-size: 22px;
 	font-weight: 300;

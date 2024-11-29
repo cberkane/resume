@@ -40,7 +40,7 @@ const ResumeItem: React.FC<{ experience?: Experience, education?: Education, cla
 									<Icon iconName={tech} />
 								</Tooltip>
 								<span className="chip">
-									<Icon iconName={tech} size={22} />
+									<Icon iconName={tech} size={20} />
 									{tech}
 								</span>
 							</>
@@ -52,7 +52,7 @@ const ResumeItem: React.FC<{ experience?: Experience, education?: Education, cla
 									<Icon iconName={env} />
 								</Tooltip>
 								<span className="chip">
-									<Icon iconName={env} size={22} />
+									<Icon iconName={env} size={20} />
 									{env}
 								</span>
 							</>

@@ -6,6 +6,7 @@
 	max-width: 1408px;
 	margin: 0 auto;
 	padding: 0 24px;
+	overflow: hidden;
 	
 	@include small-screen {
 		padding: 0 12px;

@@ -15,12 +15,13 @@ const Navbar: React.FC = () => {
     const drawerStyle: React.CSSProperties = {
         display: 'flex',
         alignItems: 'center',
+        position: 'fixed',
+        top: 0,
+        left: 0,
         width: '80%',
         height: '100vh',
         padding: '14px 28px',
         background: '#f3f3f3',
-        position: 'fixed',
-        top: 0
     }
 
     const drawerNavigate = (path: string) => {

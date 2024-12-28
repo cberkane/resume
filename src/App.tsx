@@ -7,9 +7,7 @@ import "./App.scss";
 
 function App() {
   const content = useRoutes(routes, '');
-  
-  console.log(import.meta.env.VITE_BALOU);
-  
+
   return (
     <>
       <Navbar />

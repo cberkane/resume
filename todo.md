@@ -13,3 +13,4 @@
 [] - See who sass @use works and use it
 [] - Gridify the resumeItem
 [] - Add storybook & Tailwind
+[] - Convertir en Styled Components

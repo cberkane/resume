@@ -5,7 +5,7 @@ export const me: User = {
 	lastName: "Berkane",
 	fullName: "Chihab BERKANE",
 	email: "c.berkane@hotmail.fr",
-	phoneNumber: "0652906321",
+	phoneNumber: "0752906322",
 	occupation: "Software developer",
 	location: "Le Perreux-sur-Marne",
 	socials : {
